@@ -17,7 +17,10 @@ workspace = true
 
 [dependencies]
 bdk_chain = { path = "../chain", version = "0.20.0", default-features = false }
-electrsd = { version = "0.28.0", features = [ "legacy" ] }
+electrsd = { version = "0.28.0", features = [ "legacy" ], default-features = false }
+
+[dev-dependencies]
+bdk_testenv = { path = "." }
 
 [features]
 default = ["std", "download"]
